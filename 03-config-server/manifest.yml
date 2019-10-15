@@ -1,0 +1,10 @@
+---
+applications:
+  - name: 03-config-server
+    random-route: true
+    path: target/03-config-server-0.0.1-SNAPSHOT.jar
+    env:
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
+    services:
+    - workshop-database
+    - workshop-config-server

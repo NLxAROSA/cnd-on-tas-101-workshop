@@ -1,0 +1,9 @@
+---
+applications:
+  - name: 02-database
+    random-route: true
+    path: target/02-database-0.0.1-SNAPSHOT.jar
+    env:
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
+    services:
+    - workshop-database
