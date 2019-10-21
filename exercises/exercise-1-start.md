@@ -24,7 +24,7 @@ Fortune Cookie message (String) and deploy it to Cloud Foundry.
 * Using the CLI, can you scale the application's instances up to 3 instances? And how about back to 1?
 * Now do the same via the Apps Manager
 * The Apps Manager has more nice functions, most of which are available in the CLI as well, but a lot of them are available because of Spring Boot Actuator integration. Check out the Logs, Trace, Threads and Settings tabs of your application and play around with the features in there.
-* Can you figure out how to use the Autoscaler?
+* Can you figure out how to use the Autoscaler? (Don't go above 3 instances please)
 
 ## Tips
 
