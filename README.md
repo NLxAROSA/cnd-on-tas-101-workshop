@@ -14,7 +14,7 @@ We expect you to bring:
 
 We expect you have installed:
 
-* [JDK11 or higher](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
+* [JDK11 or higher](https://adoptopenjdk.net/?variant=openjdk11&jvmVariant=hotspot)
 * [Cloud Foundry CLI](https://docs.run.pivotal.io/cf-cli/install-go-cli.html)
 
 We expect you to be familiar with Java, but if you're not it's also ok as working source code for every exercise is provided.
