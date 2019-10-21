@@ -9,8 +9,8 @@
 	<groupId>io.pivotal.workshops.cnd</groupId>
 	<artifactId>03-config-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>03-config-service</name>
-	<description>Demo project for Spring Boot</description>
+	<name>03-config-server</name>
+	<description>Config server demo application</description>
 
 	<build>
 		<plugins>

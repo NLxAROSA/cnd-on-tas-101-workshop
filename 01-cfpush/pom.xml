@@ -13,6 +13,6 @@
 	<artifactId>01-cfpush</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>01-cfpush</name>
-	<description>Demo project for Spring Boot</description>
+	<description>CF Push demo application</description>
 
 </project>

@@ -1,4 +1,4 @@
-package io.pivotal.workshops.cnd.configserver;
+package io.pivotal.workshops.cnd.serviceregistry;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,11 +8,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-public class DemoApplication {
+public class ServiceRegistryDemoApplication {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(DemoApplication.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(ServiceRegistryDemoApplication.class);
+
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(ServiceRegistryDemoApplication.class, args);
 	}
 
 	@Bean
@@ -31,4 +32,5 @@ public class DemoApplication {
 		};
 
 	}
+
 }

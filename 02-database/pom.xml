@@ -10,7 +10,7 @@
 	<artifactId>02-database</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>02-database</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Database demo application</description>
 
 	<dependencies>
 		<dependency>
