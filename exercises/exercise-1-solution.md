@@ -158,6 +158,18 @@ cf app workshop-fortune-service
 cf --help
 ```
 
+* Stopping your application
+
+```bash
+cf stop workshop-fortune-service
+```
+
+* Starting your application
+
+```bash
+cf start workshop-fortune-service
+```
+
 * Scaling the application up to 3 instances and verifying that there are now 3 instances up and running
 
 ```bash
@@ -170,7 +182,7 @@ cf app workshop-fortune-service
 * Scaling the application back down to 1 instance and verifying that there is now 1 instance up and running
 
 ```bash
-cf scale workshop-fortune-service -i 3
+cf scale workshop-fortune-service -i 1
 ```
 ```
 cf app workshop-fortune-service
@@ -181,4 +193,4 @@ cf app workshop-fortune-service
 Click 'Enable Autoscaling' and then restage the application (follow the link or use the button in the same screen). Wait a bit for it to finish, then click 'manage autoscaling'. Try setting minimum instances to 2 and maximum instances to 4 and see what happens. Try adding a scaling rule and or scheduled limit.
 
 * You can do the same in the Apps Manager UI by logging in there and navigating to your org, space and app by clicking on them, then click the 'Scale' button.
-* The Apps Manager has many functions, most of which are available in the CLI as well, but several are available because of Spring Boot Actuator integration. Check out the Logs, Trace, Threads and Settings tabs of your application.
+* The Apps Manager has many functions, most of which are available in the CLI as well, but several are available because of Spring Boot Actuator integration. Check out the Logs, Trace, Threads and Settings tabs of your application and play around with the features in there.
