@@ -1,5 +1,5 @@
 ## Cloud Native Development on Pivotal Platform 101 - Workshop
-This workshop will focus on writing a few Spring Boot applications and will teach you how to deploy them to Pivotal Platform (more specifically Cloud Foundry), provision a database and connect to it, inject configuration at runtime and setup a service registry and a circuit breaker. All with little to no developer hassle or setup. While this workshop is executed using Pivotal Platform, most of the exercises also work quite happily on other brands or OSS Cloud Foundry.
+This workshop will focus on writing a few Spring Boot applications and will teach you how to deploy them to Pivotal Platform (more specifically Cloud Foundry), provision a database and connect to it, inject configuration at runtime and setup a service registry and a circuit breaker. All with little to no developer hassle or setup. While this workshop is executed using Pivotal Platform, all of the exercises also work quite happily on other brands or OSS Cloud Foundry.
 
 [Getting started with Pivotal Platform](https://pivotal.io/platform/pcf-tutorials/getting-started-with-pivotal-cloud-foundry)
 
