@@ -4,6 +4,8 @@
 
 * Build A Spring Boot 2 micro service that Expose a REST API on the root and return a 
 Fortune Cookie message (String) and deploy it to Cloud Foundry.
+* Explore the functionality of the CF CLI.
+* Explore the functionality of the Apps Manager.
 
 ## Steps 
 
