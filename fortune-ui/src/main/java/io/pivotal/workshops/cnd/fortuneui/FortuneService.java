@@ -4,7 +4,6 @@ import java.time.Duration;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
@@ -20,12 +19,10 @@ public class FortuneService {
 
   private final RestTemplate restTemplate;
   private final CircuitBreaker circuitBreaker;
-  private final String serviceUri;
 
-  public FortuneService(RestTemplate restTemplate, @Value("${fortune.service.uri}") String serviceUri) {
+  public FortuneService(RestTemplate restTemplate) {
     this.restTemplate = restTemplate;
     this.circuitBreaker = createCircuitBreaker();
-    this.serviceUri = serviceUri;
   }
 
   private CircuitBreaker createCircuitBreaker() {
@@ -46,7 +43,7 @@ public class FortuneService {
   }
 
   private String remoteFortune() {
-    return restTemplate.getForObject(serviceUri, String.class);
+    return restTemplate.getForObject("http://fortune-service", String.class);
   }
 
   private String defaultFortune() {

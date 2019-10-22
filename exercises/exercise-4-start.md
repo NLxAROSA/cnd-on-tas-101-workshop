@@ -1,11 +1,11 @@
-# Exercise 4 - start 
+# Exercise 4 - Service Discovery and Circuit Breakers
 
 ## Goal
 
-* Register you Fortune Service at a Service Registry (Eureka) that is running on Cloud Foundry
-* Deploy the Fortune UI (we provide you this application) on Cloud Foundry
-* Test the Fortune UI that will call the Fortune Service in the server
-* Scale out the Fortune Service
+* Register your Fortune Service at a Service Registry (powered by Eureka) that is running on Cloud Foundry
+* Deploy the Fortune Teller UI (application provided) on Cloud Foundry
+* Test the Fortune Teller UI that will call the Fortune Service in the server
+* Scale out and turn off the Fortune Service to see its effects on the Fortune Teller UI
 
 ## Steps
 

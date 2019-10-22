@@ -15,8 +15,7 @@ import java.util.Map;
 @Controller
 public class GreetingController {
 
-  Logger logger = LoggerFactory
-      .getLogger(GreetingController.class);
+  Logger logger = LoggerFactory.getLogger(GreetingController.class);
 
   private final FortuneService fortuneService;
 
@@ -25,7 +24,7 @@ public class GreetingController {
   }
 
   @RequestMapping("/")
-  String getGreeting(Model model){
+  String getGreeting(Model model) {
 
     logger.debug("Adding greeting");
     model.addAttribute("msg", "Welcome!");
@@ -44,13 +43,13 @@ public class GreetingController {
       logger.error(e.getMessage());
       e.printStackTrace();
     }
-    
-    //resolves to the greeting.html thymeleaf template
+
+    // resolves to the greeting.html thymeleaf template
     return "greeting";
   }
 
   @RequestMapping("/kill")
-  String killInstance(Model model){
+  String killInstance(Model model) {
 
     logger.debug("Adding greeting");
     model.addAttribute("msg", "Greetings!!!");
@@ -71,23 +70,21 @@ public class GreetingController {
     }
 
     Thread killThread = new Thread(new Runnable() {
-    public void run()
-    {
-	 try {	
-	 	Thread.sleep(500);
-         } catch (Exception e) {
-	 	logger.warn("Attempting to kill instance: Thread could not sleep");
-	 }
-	 logger.info("Killing app instance");
-	 System.exit(-1);
-    }});  
+      public void run() {
+        try {
+          Thread.sleep(500);
+        } catch (Exception e) {
+          logger.warn("Attempting to kill instance: Thread could not sleep");
+        }
+        logger.info("Killing app instance");
+        System.exit(-1);
+      }
+    });
     killThread.start();
 
-    //resolves to the greeting.html thymeleaf template
+    // resolves to the greeting.html thymeleaf template
     return "greeting";
   }
-
-
 
   /**
    * addAppEnv - Retrieve information about the application
@@ -101,7 +98,7 @@ public class GreetingController {
     Map<String, Object> modelMap = new HashMap<String, Object>();
 
     String instanceIndex = getVcapApplicationMap().getOrDefault("instance_index", "no index environment variable")
-            .toString();
+        .toString();
     modelMap.put("instanceIndex", instanceIndex);
 
     String instanceAddr = System.getenv("CF_INSTANCE_ADDR");
@@ -111,7 +108,7 @@ public class GreetingController {
     modelMap.put("instanceAddr", instanceAddr);
 
     String applicationName = (String) getVcapApplicationMap().getOrDefault("application_name",
-            "no name environment variable");
+        "no name environment variable");
     modelMap.put("applicationName", applicationName);
 
     @SuppressWarnings("rawtypes")
@@ -156,6 +153,5 @@ public class GreetingController {
     logger.warn(vcap + " not defined, returning empty Map");
     return new HashMap<String, String>();
   }
-
 
 }

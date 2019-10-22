@@ -1,11 +1,11 @@
 ---
 applications:
-  - name: fortune-ui
+  - name: 04-service-registry
     random-route: true
-    path: target/fortune-ui-0.0.1-SNAPSHOT.jar
+    path: target/04-service-registry-0.0.1-SNAPSHOT.jar
     env:
       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
     services:
-    - workshop-service-registry
-    - workshop-queue
+    - workshop-database
     - workshop-config-server
+    - workshop-service-registry
