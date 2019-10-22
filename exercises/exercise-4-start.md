@@ -11,7 +11,7 @@
 
 * Introduce:
   * Maven dependency: `spring-cloud-services-starter-service-registry`
-  * `bootstrap.yml` or `bootstrap.properties` and configure the name `fortune-service` of the application used to register at the Service Registry  
+  * `bootstrap.yml` or `bootstrap.properties` and configure the name `fortune-service` of the application used to register at the Service Registry (Note: name is important in service discovery, so if you change that here, you also need to change that in the UI application)  
 * Start a Service Registry with name `workshop-service-registry`
 
 ```bash
@@ -42,7 +42,6 @@ cf create-service p.rabbitmq single-node-3.7 workshop-cloud-bus
 
 If you have time left:
 
-* Check the service registry Dashboard in the browser and see that both applications are registered
 * Play around to (auto) scale the number of instances of your Fortune Service
 * Completely shut down all instances of your Fortune Service and see how the UI application behaves
 
@@ -50,6 +49,7 @@ If you have time left:
 
 * When running the application on your local machine use H2, no Config Server and no Service Registry
 * Spring Cloud Service Registry dependency to add `pom.xml`
+* If you changed the name from the application in `bootstrap.properties` to something else, be sure to change this in the `remoteFortune()` method in the `FortuneService` class in the [fortune-ui](../fortune-ui/src/main/java/io/pivotal/workshops/cnd/fortuneui/FortuneService.java) as well.
 
 ```xml
 <dependency>
