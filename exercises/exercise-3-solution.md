@@ -1,30 +1,28 @@
 # Exercise 3 - solution 
 
-Solution branch: `2-persistent-database-config-server`
-
 * Add dependency management
 
 Add to your `pom.xml`:
 
 ```xml
 <dependencyManagement>
-    <dependencies>
-        <dependency>
-            <groupId>io.pivotal.spring.cloud</groupId>
-            <artifactId>spring-cloud-services-dependencies</artifactId>
-            <version>2.1.4.RELEASE</version>
-            <type>pom</type>
-            <scope>import</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-dependencies</artifactId>
-            <version>Greenwich.RELEASE</version>
-            <type>pom</type>
-            <scope>import</scope>
-        </dependency>
-    </dependencies>
-</dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>io.pivotal.spring.cloud</groupId>
+				<artifactId>spring-cloud-services-dependencies</artifactId>
+				<version>2.1.4.RELEASE</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Greenwich.SR3</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 ```
 
 * Add dependencies 
@@ -44,7 +42,7 @@ Add to your `pom.xml`:
 </dependencies>
 ```
 
-* Disable security
+* Disable security (don't do this in production!) Did you see what happens if you don't? Because Spring Security is on the class-path, Spring Boot autoconfiguration will automatically set it up for you, meaning your endpoints are now secured with user and password. Since we don't want this we'll disable it for now, but in your code that goes to production you'll probably put some nice integration with an authentication/authorization system of choice in there.
 
 ```java
 package io.pivotal.workshop.workshopfortuneservice;
@@ -65,7 +63,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 }
 ```
 
-configuration/application.ymml
+`configuration/application.yml`
 
 ```yml
 management:
@@ -86,27 +84,27 @@ spring:
         dialect: org.hibernate.dialect.MySQL55Dialect
 ```
 
-* Start a config server in Cloud Foundry
+* Provision a config server in Cloud Foundry
 
 ```bash
 cf create-service p-config-server standard workshop-config-server -c '{"git": { "uri": "https://github.com/dcaron/workshop-fortune-service.git", "searchPaths": "configuration", "label": "2-persistent-database-config-server" } }'
 ```
 
-* Start a database in Cloud Foundry
+* Provision a database in Cloud Foundry
 
 ```bash
 cf create-service p.mysql db-small workshop-db
 ```
 
-* Bind the database and config server services to the application
-
-introduce service instance names in manifest.yml:
+* Bind the database and config server services to the application by introducing service instance names in manifest.yml:
 
 ```yml
   services:
     - workshop-db
     - workshop-config-server
 ```
+
+Note that you can do the same via CLI by using the 'cf bind-service' command. So what's the purpose of `create-service` and `bind-service`? `create-service` provisions a `service instance` in your space according to the specified `plan`. This usually (but not always) involve the allocation of resources like VMs. `bind-service` generates a set of credentials for your application to use the service and exposes them in the runtime environment of CF. Spring Boot picks this up automatically. Externalizing your configuration in this way ensures your applications are portable and it also opens up the way to more advanced scenarios like automatic credential rotation. It also frees the developers of having to store and maintain credentials on their end.
 
 * Build project again
 

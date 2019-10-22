@@ -1,4 +1,4 @@
-# Exercise 2
+# Exercise 2 - add a simple database to your application using H2 and Spring Data
 
 ## Goal
  

@@ -1,4 +1,4 @@
-# Exercise 1
+# Exercise 1 - CF Push a simple Spring Boot application onto Cloud Foundry
 
 ## Goal
 
