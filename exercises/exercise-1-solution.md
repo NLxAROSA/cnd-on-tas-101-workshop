@@ -139,6 +139,8 @@ In the output you'll see that your application is uploaded after which CF will d
 * Lookup the created (dynamic) route from the console
 * Copy the route 
 * Open the application in the browser (e.g. in specific example the route was: [https://workshop-fortune-service-relaxed-grysbok.apps.lropcf.pushto.cf](https://workshop-fortune-service-relaxed-grysbok.apps.lropcf.pushto.cf))
+* Open [manifest.yml](../01-cfpush/manifest.yml). The manifest contains all kind of (non-environment specific) parameters for your application to be deployed onto Cloud Foundry. Any parameter in here you can also specify (or override) on the command line. A major difference between a CF manifest and a k8s deployment is the fact that you never specify infrastructure in a CF manifest, this is all handled by the platform and you do not need to worry about that as a developer. Just specify what your application needs in terms of resources and you're good to go (much like deploying a 'serverless' function, but for applications).
+
 * Show the logs for your running app
 
 ```bash
