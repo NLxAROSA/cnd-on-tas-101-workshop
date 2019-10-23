@@ -34,6 +34,18 @@ public class FortuneController {
 
 ```
 
+* Create a CF manifest (`manifest.yml`) and replace the `name` and `path` with values appropriate for your own application.
+
+``` yaml
+---
+applications:
+  - name: 01-cfpush
+    random-route: true
+    path: target/01-cfpush-0.0.1-SNAPSHOT.jar
+    env:
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
+```
+
 * Push the application to Cloud Foundry (use from your project folder)
 
 ```bash

@@ -17,7 +17,7 @@ Fortune Cookie message (String) and deploy it to Cloud Foundry.
 * Introduce a ‘Fortune Cookie’ controller (`@RestController`, `@GetMapping`) that returns a simple String message
 * Build the project using Maven and run it locally first
 * Call the REST endpoint from the browser or curl/http to show the static Fortune text
-* If the application is working fine push the application to Cloud Foundry
+* If the application is working fine push the application to Cloud Foundry using the CF CLI. You can add all parameters from the command line, but it's easier to create a [manifest.yml](../01-cfpush/manifest.yml) so you don't need to type them every time. The provided one should be enough, just be sure to change the `name` and `path` accordingly to your own application.
 * After pushing the application, there's a lot of console output, can you figure out what it's doing?
 * Call the REST endpoint of the deployed application from the browser or curl/http to show the static Fortune text
 * Take a look at the [manifest.yml](../01-cfpush/manifest.yml), can you spot differences with other popular deployment platforms (e.g. k8s or WebSphere or other?)
