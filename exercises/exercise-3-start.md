@@ -19,7 +19,7 @@ cf create-service <service-name> <service-plan> <service-instance-name>
 ```
 
 ```bash
-cf create-service p.mysql db-small workshop-db
+cf create-service p.mysql db-small workshop-database
 ```
 
 * Introduce:
