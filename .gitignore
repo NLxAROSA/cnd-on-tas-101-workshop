@@ -31,3 +31,7 @@ build/
 .vscode/
 
 **/.DS_Store
+
+password.txt
+users.txt
+removeusers.txt
