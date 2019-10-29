@@ -5,6 +5,7 @@ applications:
     path: target/04-service-registry-0.0.1-SNAPSHOT.jar
     env:
       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
+      TRUST_CERTS: api.sys.loyalton.cf-app.com
     services:
     - workshop-database
     - workshop-config-server
