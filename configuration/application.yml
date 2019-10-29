@@ -3,7 +3,9 @@ management:
     web:
       exposure:
         include: "*"
-spring:
+  info:
+    git:
+      mode: full
   jpa:
     generate-ddl: true
     properties:
