@@ -20,7 +20,8 @@ body	{
 .header {
     background-image: url("../img/jfall.png");
     background-repeat: no-repeat;
-    background-size: 20%;
+    background-position: center;
+    background-size: 5%;
     font-size: 4vw;
 }
 
