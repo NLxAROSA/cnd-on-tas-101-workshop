@@ -6,8 +6,8 @@ management:
   info:
     git:
       mode: full
-  jpa:
-    generate-ddl: true
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL55Dialect
+jpa:
+  generate-ddl: true
+  properties:
+    hibernate:
+      dialect: org.hibernate.dialect.MySQL55Dialect
