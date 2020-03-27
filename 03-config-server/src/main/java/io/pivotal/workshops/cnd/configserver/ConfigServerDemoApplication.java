@@ -31,6 +31,7 @@ public class ConfigServerDemoApplication {
 			fortuneRepo.save(new Fortune("Don't congregate."));
 			fortuneRepo.save(new Fortune("Work remote if you can."));
 			fortuneRepo.save(new Fortune("The bad times will pass!"));
+			fortuneRepo.save(new Fortune("2020 will be the year of the Linux desktop."));
 			LOGGER.info("Fortune Repo record count: {}", fortuneRepo.count());
 			fortuneRepo.findAll().forEach(x -> LOGGER.debug(x.toString()));
 		};
