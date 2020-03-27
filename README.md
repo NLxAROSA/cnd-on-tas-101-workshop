@@ -1,7 +1,7 @@
-## Cloud Native Development on Pivotal Platform 101 - Workshop
-This workshop will focus on writing a few Spring Boot applications and will teach you how to deploy them to Pivotal Platform (more specifically Cloud Foundry), provision a database and connect to it, inject configuration at runtime and setup a service registry and a circuit breaker. All with little to no developer hassle or setup. While this workshop is executed using Pivotal Platform, all of the exercises also work quite happily on other brands of Cloud Foundry or on OSS Cloud Foundry.
+## Cloud Native Development on Tanzu Application Service 101 - Workshop
+This workshop will focus on writing a few Spring Boot applications and will teach you how to deploy them to Tanzu Application Service, formerly known as Pivotal Application Service, formerly known as Pivotal Cloud Foundry. You will provision a database and connect to it, inject configuration at runtime and setup a service registry and a circuit breaker. All with little to no developer hassle or setup. While this workshop is executed using Tanzu Application Service, all of the exercises also work quite happily on other brands of Cloud Foundry or on OSS Cloud Foundry.
 
-[Getting started with Pivotal Platform](https://pivotal.io/platform/pcf-tutorials/getting-started-with-pivotal-cloud-foundry)
+[Getting started with Tanzu Application Service](https://tanzu.vmware.com/tutorials/getting-started)
 
 
 ## Prerequisites
