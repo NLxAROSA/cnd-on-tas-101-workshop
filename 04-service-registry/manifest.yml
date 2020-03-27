@@ -6,6 +6,6 @@ applications:
     env:
       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
     services:
-    - workshop-db
+    - workshop-database
     - workshop-config-server
     - workshop-service-registry
