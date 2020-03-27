@@ -8,7 +8,7 @@ public class FortuneController  {
 
     @GetMapping
     public String getFortune()  {
-        return "Sorry, no fortune today.";
+        return "Your future is bright!";
     }
 
 }

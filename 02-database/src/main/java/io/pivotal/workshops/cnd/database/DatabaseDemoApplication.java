@@ -26,6 +26,11 @@ public class DatabaseDemoApplication {
 			fortuneRepo.save(new Fortune("You can always find happiness at work on Friday."));
 			fortuneRepo.save(new Fortune("You will be hungry again in one hour."));
 			fortuneRepo.save(new Fortune("Today will be an awesome day!"));
+			fortuneRepo.save(new Fortune("Wash your hands, with soap, often."));
+			fortuneRepo.save(new Fortune("Keep your distance."));
+			fortuneRepo.save(new Fortune("Don't congregate."));
+			fortuneRepo.save(new Fortune("Work remote if you can."));
+			fortuneRepo.save(new Fortune("The bad times will pass!"));
 			LOGGER.info("Fortune Repo record count: {}", fortuneRepo.count());
 			fortuneRepo.findAll().forEach(x -> LOGGER.debug(x.toString()));
 		};
