@@ -15,7 +15,7 @@
 * Start a Service Registry with name `workshop-service-registry`
 
 ```bash
-cf create-service p-service-registry standard workshop-service-registry
+cf create-service p.service-registry standard workshop-service-registry
 ```
 
 * Bind the Service Registry service instance to your application

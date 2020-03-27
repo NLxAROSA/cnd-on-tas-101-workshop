@@ -37,7 +37,7 @@ services:
 * Start a Service Registry with name `workshop-service-registry` on Cloud Foundry
 
 ```bash
-cf create-service p-service-registry standard workshop-service-registry
+cf create-service p.service-registry standard workshop-service-registry
 ```
 
 * Build the project again

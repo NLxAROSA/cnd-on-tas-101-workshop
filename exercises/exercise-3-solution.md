@@ -87,7 +87,7 @@ spring:
 * Provision a config server in Cloud Foundry
 
 ```bash
-cf create-service p-config-server standard workshop-config-server -c '{"git": { "uri": "https://github.com/dcaron/workshop-fortune-service.git", "searchPaths": "configuration", "label": "2-persistent-database-config-server" } }'
+cf create-service p.config-server standard workshop-config-server -c '{"git": { "uri": "https://github.com/dcaron/workshop-fortune-service.git", "searchPaths": "configuration", "label": "2-persistent-database-config-server" } }'
 ```
 
 * Provision a database in Cloud Foundry

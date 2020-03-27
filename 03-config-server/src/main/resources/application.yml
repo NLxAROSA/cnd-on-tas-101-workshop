@@ -1,3 +1,4 @@
 spring:
+  profiles: local 
   jpa:
     generate-ddl: true
