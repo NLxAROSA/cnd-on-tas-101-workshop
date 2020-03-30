@@ -11,13 +11,13 @@ This workshop will focus on writing a few Spring Boot applications and will teac
 We expect you to have with you:
 
 * A laptop with Windows, Linux or MacOS
-* A working internet connection
-* An IDE or code editor of your choice
+* A working internet connection (corporate proxies at your own peril)
 
 We expect you to have installed:
 
 * [JDK11 or higher](https://adoptopenjdk.net/?variant=openjdk11&jvmVariant=hotspot)
 * [Cloud Foundry CLI](https://docs.run.pivotal.io/cf-cli/install-go-cli.html)
+* An IDE of your choice, e.g. [vscode](https://code.visualstudio.com/), [idea](https://www.jetbrains.com/idea/), [eclipse](https://www.eclipse.org/eclipseide/) or [netbeans](https://netbeans.org/features/). 
 
 We expect you to be familiar with Java, but if you're not it's also ok as working source code for every exercise is provided.
 
