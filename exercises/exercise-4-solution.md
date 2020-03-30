@@ -53,7 +53,7 @@ cf push
 ```
 
 * Prepare the UI application 
-  * Clone repo: [https://github.com/NLxAROSA/workshop-greeting-ui.git](https://github.com/NLxAROSA/workshop-greeting-ui.git) 
+  * Fortune UI can be found right [here](fortune-ui/)
   * Build the project `./mvnw clean package`
 
 * Start a RabbitMQ service instance with name `workshop-cloud-bus`
