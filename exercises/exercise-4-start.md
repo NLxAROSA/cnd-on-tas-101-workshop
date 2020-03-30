@@ -28,7 +28,7 @@ cf push
 
 * Now it's time to deploy a UI in front of the Fortune Service. 
   * Fortune UI can be found right [here](fortune-ui/)
-  * Build the project
+  * Build the project and run it
 
 * Start a RabbitMQ service instance with name `workshop-cloud-bus`
 
