@@ -2,14 +2,14 @@
 
 ## Goal
 
-* Build A Spring Boot 2 micro service that Expose a REST API on the root and return a 
+* Build A Spring Boot 2 micro service that exposes a REST API on the root and return a 
 Fortune Cookie message (String) and deploy it to Cloud Foundry.
 * Learn about the functionality of the CF CLI.
 * Learn about the functionality of the Apps Manager.
 
-## Steps 
+## Steps
 
-* Go to [https://start.spring.io](https://start.spring.io) to create a project with Spring Initializr (Start with Spring Boot 2.1.9)
+* Go to [https://start.spring.io](https://start.spring.io) to create a project with Spring Initializr (Start with Spring Boot 2.2.3)
 * Create a (Maven) Spring Boot 2 project with starters `Web` and `Actuator`
 * Use 'workshop-fortune-service' for the artifact id
 * Use the latest and greatest GA release of Spring Boot
@@ -26,7 +26,7 @@ Fortune Cookie message (String) and deploy it to Cloud Foundry.
 * Using the CLI, can you scale the application's instances up to 3 instances? And how about back to 1?
 * Now do the same via the Apps Manager
 * The Apps Manager has more nice functions, most of which are available in the CLI as well, but a lot of them are available because of Spring Boot Actuator integration. Check out the Logs, Trace, Threads and Settings tabs of your application and play around with the features in there.
-* Can you figure out how to use the Autoscaler? (Don't go above 3 instances please)
+* Can you figure out how to use the Autoscaler? Don't go above 3 instances please, for obvious reasons. ;)
 
 ## Tips
 

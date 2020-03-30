@@ -29,7 +29,7 @@ manifest.yml:
 
 ```yml
 services:
-    - workshop-db
+    - workshop-database
     - workshop-config-server
     - workshop-service-registry
 ```  

@@ -1,6 +1,6 @@
 # Exercise 3 - solution 
 
-* Add dependency management
+* Add dependency management for Spring Cloud Services
 
 Add to your `pom.xml`:
 
@@ -10,14 +10,14 @@ Add to your `pom.xml`:
 			<dependency>
 				<groupId>io.pivotal.spring.cloud</groupId>
 				<artifactId>spring-cloud-services-dependencies</artifactId>
-				<version>2.1.4.RELEASE</version>
+				<version>2.2.3.RELEASE</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>Greenwich.SR3</version>
+				<version>Hoxton.SR3</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -25,7 +25,7 @@ Add to your `pom.xml`:
 	</dependencyManagement>
 ```
 
-* Add dependencies 
+* Add dependencies for the config client and Spring Security
 
 Add to your `pom.xml`:
 
@@ -42,7 +42,7 @@ Add to your `pom.xml`:
 </dependencies>
 ```
 
-* Disable security (don't do this in production!) Did you see what happens if you don't? Because Spring Security is on the class-path, Spring Boot autoconfiguration will automatically set it up for you, meaning your endpoints are now secured with user and password. Since we don't want this we'll disable it for now, but in your code that goes to production you'll probably put some nice integration with an authentication/authorization system of choice in there.
+* Disable security (don't do this in production!) Did you see what happens if you don't? Because Spring Security is on the class-path, Spring Boot autoconfiguration will automatically set it up for you, meaning your endpoints are now secured with user and password. Since we don't want this we'll disable it for now, but in your code that goes to production you'll probably put some nice integration with an authentication/authorization system of choice (or more likely: the choice of your organisation) in there.
 
 ```java
 package io.pivotal.workshop.workshopfortuneservice;
@@ -87,7 +87,7 @@ spring:
 * Provision a config server in Cloud Foundry
 
 ```bash
-cf create-service p.config-server standard workshop-config-server -c '{"git": { "uri": "https://github.com/dcaron/workshop-fortune-service.git", "searchPaths": "configuration", "label": "2-persistent-database-config-server" } }'
+cf create-service p.config-server standard workshop-config-server -c '{"git": { "uri": "https://github.com/NLxAROSA/cnd-on-pivotal-platform-101-workshop.git", "searchPaths": "configuration" } }'
 ```
 
 * Provision a database in Cloud Foundry

@@ -164,7 +164,7 @@ cf logs workshop-fortune-service --recent
 cf app workshop-fortune-service
 ```
 
-* Show the deployed application in the TASß web console using the provided Apps Manager URL
+* Show the deployed application in the TAS web console using the provided Apps Manager URL
 
 * Check the CF CLI for other helpful commands
 

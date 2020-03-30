@@ -27,7 +27,7 @@ cf push
 ``` 
 
 * Now it's time to deploy a UI in front of the Fortune Service. 
-  * Clone repo: [https://github.com/NLxAROSA/workshop-greeting-ui.git](https://github.com/NLxAROSA/workshop-greeting-ui.git)
+  * Fortune UI can be found right [here](fortune-ui/)
   * Build the project
 
 * Start a RabbitMQ service instance with name `workshop-cloud-bus`
@@ -47,7 +47,7 @@ If you have time left:
 
 ## Hints
 
-* When running the application on your local machine use H2, no Config Server and no Service Registry
+* When running the application on your local machine use H2, no Config Server and no Service Registry. Think about how you would like to achieve this.
 * Spring Cloud Service Registry dependency to add `pom.xml`
 * If you changed the name from the application in `bootstrap.properties` to something else, be sure to change this in the `remoteFortune()` method in the `FortuneService` class in the [fortune-ui](../fortune-ui/src/main/java/io/pivotal/workshops/cnd/fortuneui/FortuneService.java) as well.
 

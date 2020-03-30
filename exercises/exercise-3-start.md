@@ -44,7 +44,7 @@ cf push
 
 * Test the application in the browser
 
-Nice work you now deployed your Fortune Service to PCF with a persistent database and load the configuration from the config server!
+Nice work! You now deployed your Fortune Service to PCF with a persistent database and load the configuration from the config server!
 
 ## Hints
 
@@ -59,14 +59,14 @@ Nice work you now deployed your Fortune Service to PCF with a persistent databas
 			<dependency>
 				<groupId>io.pivotal.spring.cloud</groupId>
 				<artifactId>spring-cloud-services-dependencies</artifactId>
-				<version>2.1.4.RELEASE</version>
+				<version>2.2.3.RELEASE</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>Greenwich.SR3</version>
+				<version>Hoxton.SR3</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
