@@ -1,4 +1,4 @@
-<img src="fortune-ui/src/main/resources/static/img/tanzu.svg" height=100/>
+<img src="fortune-ui/src/main/resources/static/img/tanzu-black.svg" height=100/>
 
 ## Cloud Native Development on Tanzu Application Service 101 - Workshop
 This workshop will focus on writing a few Spring Boot applications and will teach you how to deploy them to Tanzu Application Service, formerly known as Pivotal Application Service, formerly known as Pivotal Cloud Foundry. You will provision a database and connect to it, inject configuration at runtime and setup a service registry and a circuit breaker. All with little to no developer hassle or setup. While this workshop is executed using Tanzu Application Service, all of the exercises also work quite happily on other brands of Cloud Foundry or on OSS Cloud Foundry.
