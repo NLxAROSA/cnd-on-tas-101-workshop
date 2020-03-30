@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.pivotal.workshops.cnd</groupId>
-    <artifactId>cnd-on-pivotal-platform-101</artifactId>
+    <artifactId>cnd-on-tas-101</artifactId>
     <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Cloud Native Development on Pivotal Platform 101</name>
+    <name>Cloud Native Development on Tanzu Application Service 101</name>
 
     <modules>
         <module>01-cfpush</module>

@@ -4,7 +4,7 @@
 
 	<parent>
 		<groupId>io.pivotal.workshops.cnd</groupId>
-		<artifactId>cnd-on-pivotal-platform-101</artifactId>
+		<artifactId>cnd-on-tas-101</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 

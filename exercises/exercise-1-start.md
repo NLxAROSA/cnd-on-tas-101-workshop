@@ -9,7 +9,7 @@ Fortune Cookie message (String) and deploy it to Cloud Foundry.
 
 ## Steps
 
-* Go to [https://start.spring.io](https://start.spring.io) to create a project with Spring Initializr (Start with Spring Boot 2.2.3)
+* Go to [https://start.spring.io](https://start.spring.io) to create a project with Spring Initializr (Start with Spring Boot 2.2.6)
 * Create a (Maven) Spring Boot 2 project with starters `Web` and `Actuator`
 * Use 'workshop-fortune-service' for the artifact id
 * Use the latest and greatest GA release of Spring Boot
